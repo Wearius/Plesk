@@ -85,8 +85,8 @@ RUN set -eux; \
     dpkg-divert --rename --remove /bin/systemctl; \
     :
 
-COPY container-systemd-autologin.conf /etc/systemd/system/console-getty.service.d/override.conf
-COPY plesk-cloning-set-password.conf /etc/systemd/system/plesk-cloning.service.d/password.conf
+COPY latest/container-systemd-autologin.conf /etc/systemd/system/console-getty.service.d/override.conf
+COPY latest/plesk-cloning-set-password.conf /etc/systemd/system/plesk-cloning.service.d/password.conf
 
 # Running image with any other command will execute it as PID 1, rendering systemctl broken
 CMD ["/sbin/init"]
