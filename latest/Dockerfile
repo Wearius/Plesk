@@ -69,7 +69,7 @@ RUN set -eux; \
     printf "[taskManager]\nenabled=off\n" >> /usr/local/psa/admin/conf/panel.ini; \
     echo DOCKER > /usr/local/psa/var/cloud_id; \
     plesk bin license -i $LICENSE; \
-    plesk bin init_conf --init -email changeme@example.com -passwd "Wearius12" -allow-weak-passwords -hostname plesk.oc.wearius.in.uad; \
+    plesk bin init_conf --init -email changeme@example.com -passwd "Wearius12" -allow-weak-passwords -hostname srv-captain--plesk; \
     plesk bin settings --set admin_info_not_required=true; \
     plesk bin poweruser --off; \
     plesk bin extension --install-url https://github.com/plesk/ext-default-login/releases/download/1.2-1/default-login-1.2-1.zip; \
