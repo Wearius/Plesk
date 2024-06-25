@@ -1,10 +1,11 @@
 # Plesk container with real systemd
 # Run in background: 'docker run -d --tmpfs /tmp --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8443:8443 IMAGE'
 # Run in foreground: 'docker run -ti --rm --tmpfs /tmp --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 8443:8443 IMAGE', stop with 'halt' instead of Ctrl+D
+
 ARG OS=ubuntu:22.04
 FROM $OS
 
-LABEL maintainer="plesk-dev-leads@plesk.com"
+LABEL maintainer="wearius.ukr@gmail.com"
 
 ENV container docker
 
@@ -36,7 +37,7 @@ RUN set -eux; \
     chmod 755 /usr/bin/fake-systemctl; \
     :
 
-ARG LICENSE
+ARG LICENSE=A00Y00-1KWH10-REFG92-T9JF97-TBXC06
 ARG AI_SOURCE=http://autoinstall.plesk.com
 ARG AI_ARGS=
 ARG EXT_CATALOG=https://ext.plesk.com
